@@ -1,0 +1,4 @@
+package antstaff
+
+class AntWay {
+}
