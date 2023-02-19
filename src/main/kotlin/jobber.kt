@@ -93,7 +93,6 @@ fun copyWorkPoints(inputList: MutableList<WorkPoint>): MutableList<WorkPoint> {
     return copied.toMutableList()
 }
 
-//____________________________________________
 fun beautifulInt(n: Int): String {
     val sb = StringBuilder()
     val s = n.toString()
@@ -109,7 +108,6 @@ fun beautifulInt(n: Int): String {
     return sb.toString().reversed()
 }
 
-//_____________________________________________________
 fun beautifulDouble(n: Double): String {
     val left = n.toInt()
     val right = n - left
@@ -117,13 +115,11 @@ fun beautifulDouble(n: Double): String {
     return "${beautifulInt(left)}.$niceRight"
 }
 
-//________________________________________________________
 fun reportDistance(p1: EasyPoint, p2: EasyPoint): String {
     val d = calculateDistanceInKm(p1, p2)
     return "${okr1(d)} km. ($p1 - $p2)"
 }
 
-//________________________________________
 fun okr1(n: Double): Double {
     return (n * 10.0 + 0.5).toInt() / 10.0
 }

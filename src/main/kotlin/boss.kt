@@ -15,7 +15,6 @@ fun main(args: Array<String>) {
 
 }
 
-// servant ______________________________________
 fun reportElapsedTime(startTime: Long): String {
     val finishTime = java.util.Calendar.getInstance().timeInMillis
     val t = finishTime - startTime
@@ -28,7 +27,6 @@ fun reportElapsedTime(startTime: Long): String {
     return "$min min ${okr1(sec)} sec"
 }
 
-// servant ____________________
 fun round(d: Double): Double {
     return 0.001 * (1000.0 * d).toInt().toDouble()
 }
