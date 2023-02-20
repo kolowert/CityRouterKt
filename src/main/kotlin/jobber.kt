@@ -115,7 +115,7 @@ fun beautifulDouble(n: Double): String {
     return "${beautifulInt(left)}.$niceRight"
 }
 
-fun reportDistance(p1: EasyPoint, p2: EasyPoint): String {
+fun reportDistance(p1: EasyPoint, p2: EasyPoint, adjustmentCoef: Double): String {
     val d = calculateDistanceInKm(p1, p2)
     return "${okr1(d)} km. ($p1 - $p2)"
 }

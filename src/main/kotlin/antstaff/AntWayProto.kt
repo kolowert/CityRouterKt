@@ -13,7 +13,7 @@ class AntWayProto(private val inputPoints: Array<EasyPoint>) {
 
     private val basePool: MutableList<AntPoint> = ArrayList<AntPoint>()
 
-    fun makeVoyage(): String {
+    fun makeVoyage(adjustmentCoef: Double): String {
 
         // make Base Pool of Points
         inputPoints.forEach { basePool.add(AntPoint(it)) }
@@ -30,13 +30,13 @@ class AntWayProto(private val inputPoints: Array<EasyPoint>) {
 
         // manipulate by Base Pool
         basePool.forEach { it.status = AntStatus.NOT_VISITED }
-        singleAntJob(basePool)
+        singleAntJob(basePool, adjustmentCoef)
 
 
         return "stub"
     }
 
-    private fun singleAntJob(basePool: MutableList<AntPoint>) {
+    private fun singleAntJob(basePool: MutableList<AntPoint>, adjustmentCoef: Double) {
         for (basePoint in basePool) {
             basePoint.status = AntStatus.VISITED
 

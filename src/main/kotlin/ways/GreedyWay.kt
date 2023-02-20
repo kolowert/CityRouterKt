@@ -19,11 +19,11 @@ class GreedyWay {
     fun makeVoyage(vararg points: EasyPoint): String {
 
         //inner params
-        val iterations = 20_000
-        val qNearest = 1
-        val qBestRoutes = 120
+        val iterations = 110_000
+        val qNearest = 2
+        val qBestRoutes = 140
         val letReduceQBestRoutes = true
-        val reducingCoefficient = 0.49
+        val reducingCoefficient = 0.4
         val overReduceTip = 3
 
         val letOptimize = true
@@ -42,6 +42,8 @@ class GreedyWay {
         for (p in points) {
             firstList.add(WorkPoint(p))
         }
+
+        println("iterations: $iterations , qNearest: $qNearest , optimizingSectorSize $optimizingSectorSize")
 
         // main cycle
         var expoCounter = 0 // ||||||||||||
@@ -94,8 +96,13 @@ class GreedyWay {
 
         if (letExpoBestRoutesSet) {
             println("\n~ best routes BEFORE optimization ~")
+            routes.sort()
+            var qRoutesToPrint = 0.0833 * qBestRoutes
             for (r in routes) {
                 println(r)
+                if (--qRoutesToPrint < 0) {
+                    break
+                }
             }
         }
 

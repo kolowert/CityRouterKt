@@ -12,12 +12,14 @@ class Player {
                                                     "PolandFromLviv.csv", // 5
                                                     "EU_x.csv",           // 6
                                                     "US_RVParks.csv",     // 7
-                                                    "USA.csv",            // 8
-                                                    "EU_cross_100.csv",   // 9
-                                                    "EU_cross_120.csv"    // 10
+                                                    "USA_20.csv",         // 8
+                                                    "USA_25.csv",         // 9
+                                                    "USA_30.csv",         // 10
+                                                    "EU_cross_100.csv",   // 11
+                                                    "EU_cross_120.csv"    // 12
                                                   )
 
-    private val pointsSet = 9
+    private val pointsSet = 12
 
     fun play() {
         val filePath = "src/main/resources/points/${filesOfPointSets[pointsSet]}"

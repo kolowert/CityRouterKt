@@ -11,7 +11,7 @@ import okr2
 
 class SillyWay {
 
-    fun makeVoyage(iterations: Int = 1_000, vararg points: EasyPoint): String {
+    fun makeVoyage(iterations: Int = 1_000, vararg points: EasyPoint, adjustmentCoef: Double): String {
 
         //inner params
         val letExpoTmpResults = false
